@@ -33,7 +33,7 @@
     <button type="button" clear ion-button block (click)="onManageIngredient()">Manage Ingredients</button>
 
     <ion-list formArrayName="ingredients">
-      <ion-item *ngFor="let igControl of recipeForm.get('ingredients').controls; let index = index">
+      <ion-item *ngFor="let igControl of recipeForm.get('ingredients').value; let index = index">
         <ion-label floating>Name</ion-label>
         <ion-input type="text" [formControlName]="index"></ion-input>
       </ion-item>
